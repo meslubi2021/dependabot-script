@@ -185,7 +185,7 @@ Parsing dependencies information
 #### Running scripts with dependabot-core Dockerfile only
 
 The dependabot-core `Dockerfile` installs dependencies as the `dependabot` user,
-so volume mouning won't work unless you build the image by passing in the
+so volume mounting won't work unless you build the image by passing in the
 `USER_UID` and `USER_GID` arguments. This creates the `dependabot` user with the
 same IDs ensuring it owns the mounted files and can write to them from within
 the container.
@@ -241,7 +241,7 @@ Thus `https://[gitlab.domain/org/dependabot-script-repo]/pipeline_schedules` das
 * Clone or mirror this repository.
 * Copy `.gitlab-ci.example.yml` to `.gitlab-ci.yml` or set [a custom CI config path for direct usage](https://docs.gitlab.com/ee/ci/pipelines/settings.html#specify-a-custom-cicd-configuration-file).
 * [Set the required global variables](https://docs.gitlab.com/ee/ci/variables/#variables) used in [`./generic-update-script.rb`][generic-script].
-* Create [a pipeline schedule](https://docs.gitlab.com/ee/user/project/pipelines/schedules.html) for each managed repository.
+* Create [a pipeline schedule](https://docs.gitlab.com/ee/ci/pipelines/schedules.html) for each managed repository.
 * Set in the schedule the required variables:
   * `PROJECT_PATH`: `group/repository`
   * `PACKAGE_MANAGER_SET`: `bundler,composer,npm_and_yarn`
